@@ -20,6 +20,12 @@ addForm.addEventListener('submit',(e) => {
     if(todo.length){ //positive value = true, false otherwise
         generateTemplate(todo);
         addForm.reset()
+    }    
+})
+
+// delete todos
+list.addEventListener('click', e => {
+    if(e.target.classList.contains('delete')){
+        e.target.parentElement.remove();
     }
-    
 })
